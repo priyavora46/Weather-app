@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
+
+  <!-- ✅ Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!-- Optional: Your custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ✅ Navbar -->
+  <nav class="navbar navbar-expand-lg" style="background-color: #1e3a8a;">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white fw-bold" href="index.html">Weather App</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  
+
+  <!-- ✅ Content Section -->
+  <div class="container my-5">
+    <h1 class="text-center mb-4">🌤️ Weather App</h1>
+
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-6">
+        <input id="cityInput" type="text" class="form-control mb-3" placeholder="Enter city name" />
+        <div class="d-grid">
+          <button onclick="getWeather()" class="btn btn-primary">Search</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mb-4">
+      <button onclick="showToday()" class="btn btn-outline-primary me-2">Today</button>
+      <button onclick="showTomorrow()" class="btn btn-outline-primary me-2">Tomorrow</button>
+      <button onclick="showNext5Days()" class="btn btn-outline-primary">Next 5 Days</button>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6 bg-white p-4 rounded shadow">
+        <h2 id="city" class="fw-bold mb-2"></h2>
+        <p id="temp" class="mb-1"></p>
+        <p id="description" class="mb-3"></p>
+        <div id="forecast" class="border-start ps-3 text-secondary small"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Your custom script -->
+  <script src="script.js"></script>
+</body>
+</html>
